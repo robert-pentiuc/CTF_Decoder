@@ -19,6 +19,13 @@ def solve_level_3():
     result = bytes.fromhex(msg_dec)
     return result
 
+def solve_level_4():
+    from base64 import b64decode
+    msg = 'NjY2YzYxNjc3YjZjMzQ3OTMzNzIzNTVmMzA2ZTVmNmMzNDc5MzM3MjM1N2Q='
+    msg_dec = b64decode(msg)
+    msg_dec2 = b64decode(msg_dec)
+    return msg_dec2
+
 
 
 
@@ -26,6 +33,7 @@ def main():
     print(solve_level_1())
     print(solve_level_2())
     print(solve_level_3())
+    print(solve_level_4())
 
 
 if __name__ == '__main__':
